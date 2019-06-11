@@ -1,0 +1,51 @@
+{
+  "name": "Job",
+  "plural": "jobs",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "customer_id": {
+      "type": "number",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "item_name": {
+      "type": "string",
+      "required": true
+    },
+    "quantity": {
+      "type": "number",
+      "required": true
+    },
+    "unit_price": {
+      "type": "number",
+      "required": true
+    },
+    "taxable": {
+      "type": "boolean",
+      "required": true
+    },
+    "start": {
+      "type": "date",
+      "required": true
+    },
+    "finish": {
+      "type": "date",
+      "required": true
+    },
+    "onmyway": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

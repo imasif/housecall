@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "Address": {
+    "dataSource": "mysqlID",
+    "public": true
+  },
+  "Customer": {
+    "dataSource": "mysqlID",
+    "public": true
+  },
+  "Email": {
+    "dataSource": "mysqlID",
+    "public": true
+  },
+  "Phone": {
+    "dataSource": "mysqlID",
+    "public": true
+  },
+  "Users": {
+    "dataSource": "mysqlID",
+    "public": true
+  },
+  "Job": {
+    "dataSource": "mysqlID",
+    "public": true
+  }
+}

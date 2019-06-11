@@ -1,0 +1,13 @@
+{
+  "mysqlID": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "housecall",
+    "password": "8083408",
+    "name": "mysqlID",
+    "user": "root",
+    "connector": "mysql",
+    "createDatabase": true
+  }
+}
