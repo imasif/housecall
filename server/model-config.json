@@ -15,7 +15,7 @@
   },
   "Address": {
     "dataSource": "mysqlID",
-    "public": true
+    "public": false
   },
   "Customer": {
     "dataSource": "mysqlID",
@@ -23,11 +23,11 @@
   },
   "Email": {
     "dataSource": "mysqlID",
-    "public": true
+    "public": false
   },
   "Phone": {
     "dataSource": "mysqlID",
-    "public": true
+    "public": false
   },
   "Users": {
     "dataSource": "mysqlID",
@@ -36,5 +36,28 @@
   "Job": {
     "dataSource": "mysqlID",
     "public": true
+  },
+  "AccessToken": {
+    "dataSource": "mysqlID",
+    "public": false,
+    "relations": {
+      "user": {
+        "type": "belongsTo",
+        "model": "Users",
+        "foreignKey": "userId"
+      }
+    }
+  },
+  "ACL": {
+    "dataSource": "mysqlID",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mysqlID",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "mysqlID",
+    "public": false
   }
 }
