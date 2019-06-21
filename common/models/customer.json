@@ -67,6 +67,16 @@
         "autoId": true
       },
       "through": "Phone"
+    },
+    "jobs": {
+      "type": "hasMany",
+      "model": "Job",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true,
+        "disableInclude": true
+      },
+      "through": ""
     }
   },
   "acls": [
