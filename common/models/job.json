@@ -45,7 +45,7 @@
   },
   "validations": [],
   "relations": {
-    "Service_Lists": {
+    "Service_List": {
       "type": "embedsMany",
       "model": "Service_List",
       "options": {
@@ -55,7 +55,7 @@
       },
       "through": "Service_List"
     },
-    "Material_Lists": {
+    "Material_List": {
       "type": "embedsMany",
       "model": "Material_List",
       "options": {
