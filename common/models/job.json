@@ -45,25 +45,25 @@
   },
   "validations": [],
   "relations": {
-    "service_list": {
+    "servicelist": {
       "type": "embedsMany",
-      "model": "Service_List",
+      "model": "Servicelist",
       "options": {
         "forceId": true,
         "validate": true,
         "autoId": true
       },
-      "through": "Service_List"
+      "through": "Servicelist"
     },
-    "material_list": {
+    "materiallist": {
       "type": "embedsMany",
-      "model": "Material_List",
+      "model": "Materiallist",
       "options": {
         "forceId": true,
         "validate": true,
         "autoId": true
       },
-      "through": "Material_List"
+      "through": "Materiallist"
     },
     "customer": {
       "type": "belongsTo",

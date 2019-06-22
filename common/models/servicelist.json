@@ -1,6 +1,6 @@
 {
-  "name": "Service_List",
-  "plural": "Service_Lists",
+  "name": "Servicelist",
+  "plural": "servicelists",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {

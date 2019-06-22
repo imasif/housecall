@@ -1,6 +1,6 @@
 {
-  "name": "Material_List",
-  "plural": "Material_Lists",
+  "name": "Materiallist",
+  "plural": "materiallists",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
