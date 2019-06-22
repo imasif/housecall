@@ -45,6 +45,15 @@
   },
   "validations": [],
   "relations": {
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true,
+        "disableInclude": true
+      }
+    },
     "servicelist": {
       "type": "embedsMany",
       "model": "Servicelist",
@@ -64,15 +73,6 @@
         "autoId": true
       },
       "through": "Materiallist"
-    },
-    "customer": {
-      "type": "belongsTo",
-      "model": "Customer",
-      "foreignKey": "",
-      "options": {
-        "nestRemoting": true,
-        "disableInclude": true
-      }
     }
   },
   "acls": [
