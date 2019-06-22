@@ -37,6 +37,14 @@
     "dataSource": "mysqlID",
     "public": true
   },
+  "Servicelist": {
+    "dataSource": "mysqlID",
+    "public": false
+  },
+  "Materiallist": {
+    "dataSource": "mysqlID",
+    "public": false
+  },
   "AccessToken": {
     "dataSource": "mysqlID",
     "public": false,
