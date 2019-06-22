@@ -15,20 +15,16 @@
       "type": "string",
       "required": true
     },
-    "item_name": {
+    "sub_total": {
+      "type": "number",
+      "required": true
+    },
+    "total": {
+      "type": "number",
+      "required": true
+    },
+    "notes": {
       "type": "string",
-      "required": true
-    },
-    "quantity": {
-      "type": "number",
-      "required": true
-    },
-    "unit_price": {
-      "type": "number",
-      "required": true
-    },
-    "taxable": {
-      "type": "boolean",
       "required": true
     },
     "start": {
@@ -49,6 +45,26 @@
   },
   "validations": [],
   "relations": {
+    "Service_Lists": {
+      "type": "embedsMany",
+      "model": "Service_List",
+      "options": {
+        "forceId": true,
+        "validate": true,
+        "autoId": true
+      },
+      "through": "Service_List"
+    },
+    "Material_Lists": {
+      "type": "embedsMany",
+      "model": "Material_List",
+      "options": {
+        "forceId": true,
+        "validate": true,
+        "autoId": true
+      },
+      "through": "Material_List"
+    },
     "customer": {
       "type": "belongsTo",
       "model": "Customer",
