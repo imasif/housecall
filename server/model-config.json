@@ -14,7 +14,7 @@
     ]
   },
   "Address": {
-    "dataSource": "mysqlID",
+    "dataSource": "transient",
     "public": false
   },
   "Customer": {
@@ -22,11 +22,11 @@
     "public": true
   },
   "Email": {
-    "dataSource": "mysqlID",
+    "dataSource": "transient",
     "public": false
   },
   "Phone": {
-    "dataSource": "mysqlID",
+    "dataSource": "transient",
     "public": false
   },
   "Users": {
@@ -38,11 +38,11 @@
     "public": true
   },
   "Servicelist": {
-    "dataSource": "mysqlID",
+    "dataSource": "transient",
     "public": false
   },
   "Materiallist": {
-    "dataSource": "mysqlID",
+    "dataSource": "transient",
     "public": false
   },
   "AccessToken": {
@@ -67,5 +67,9 @@
   "Role": {
     "dataSource": "mysqlID",
     "public": false
+  },
+  "Schedule": {
+    "dataSource": "mysqlID",
+    "public": true
   }
 }

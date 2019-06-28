@@ -7,6 +7,11 @@
     "validateUpsert": true
   },
   "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "defaultFn": "uuid"
+    },
     "first_name": {
       "type": "string",
       "required": true
@@ -77,6 +82,15 @@
         "disableInclude": true
       },
       "through": ""
+    },
+    "schedules": {
+      "type": "hasMany",
+      "model": "Schedule",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true,
+        "disableInclude": true
+      }
     }
   },
   "acls": [

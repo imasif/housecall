@@ -25,7 +25,16 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "schedules": {
+      "type": "hasMany",
+      "model": "Schedule",
+      "foreignKey": "userId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [
     {
       "accessType": "*",

@@ -1,6 +1,5 @@
 {
-  "name": "Job",
-  "plural": "jobs",
+  "name": "Schedule",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -12,6 +11,12 @@
       "foreignKey": "customerId",
       "entityKey": "id",
       "entity": "Customer"
+    },
+    "userId": {
+      "name": "userId",
+      "foreignKey": "userId",
+      "entityKey": "id",
+      "entity": "Users"
     }
   },
   "properties": {
@@ -20,35 +25,14 @@
       "id": true,
       "defaultFn": "uuid"
     },
-    "type": {
-      "type": "string",
-      "required": true
-    },
-    "sub_total": {
-      "type": "number",
-      "required": true
-    },
-    "total": {
-      "type": "number",
-      "required": true
-    },
-    "notes": {
-      "type": "string",
-      "required": true
-    },
-    "start": {
+    "start_date_time": {
       "type": "date",
-      "required": false,
+      "required": true,
       "defaultFn": null
     },
-    "finish": {
+    "end_date_time": {
       "type": "date",
-      "required": false,
-      "defaultFn": null
-    },
-    "onmyway": {
-      "type": "date",
-      "required": false,
+      "required": true,
       "defaultFn": null
     }
   },
@@ -59,29 +43,16 @@
       "model": "Customer",
       "foreignKey": "customerId",
       "options": {
-        "nestRemoting": true,
-        "disableInclude": true
+        "nestRemoting": true
       }
     },
-    "servicelist": {
-      "type": "embedsMany",
-      "model": "Servicelist",
+    "user": {
+      "type": "belongsTo",
+      "model": "Users",
+      "foreignKey": "userId",
       "options": {
-        "forceId": true,
-        "validate": true,
-        "autoId": true
-      },
-      "through": "Servicelist"
-    },
-    "materiallist": {
-      "type": "embedsMany",
-      "model": "Materiallist",
-      "options": {
-        "forceId": true,
-        "validate": true,
-        "autoId": true
-      },
-      "through": "Materiallist"
+        "nestRemoting": true
+      }
     }
   },
   "acls": [
