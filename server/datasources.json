@@ -6,7 +6,7 @@
     "database": "worklocker",
     "password": "8083408",
     "name": "mysqlID",
-    "user": "root",
+    "user": "worklocker",
     "connector": "mysql",
     "createDatabase": true
   },
