@@ -17,6 +17,12 @@
       "foreignKey": "userId",
       "entityKey": "id",
       "entity": "Users"
+    },
+    "jobId": {
+      "name": "jobId",
+      "foreignKey": "jobId",
+      "entityKey": "id",
+      "entity": "Job"
     }
   },
   "properties": {
@@ -38,6 +44,14 @@
   },
   "validations": [],
   "relations": {
+    "job": {
+      "type": "belongsTo",
+      "model": "Job",
+      "foreignKey": "jobId",
+      "options": {
+        "nestRemoting": true
+      }
+    },
     "customer": {
       "type": "belongsTo",
       "model": "Customer",
