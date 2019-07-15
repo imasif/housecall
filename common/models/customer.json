@@ -5,7 +5,7 @@
   "idInjection": true,
   "options": {
     "validateUpsert": true
-  },
+  }, 
   "properties": {
     "id": {
       "type": "string",
@@ -76,7 +76,7 @@
     "jobs": {
       "type": "hasMany",
       "model": "Job",
-      "foreignKey": "",
+      "foreignKey": "customerId",
       "options": {
         "nestRemoting": true,
         "disableInclude": true
@@ -86,7 +86,7 @@
     "schedules": {
       "type": "hasMany",
       "model": "Schedule",
-      "foreignKey": "",
+      "foreignKey": "scheduleId",
       "options": {
         "nestRemoting": true,
         "disableInclude": true

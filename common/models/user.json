@@ -1,12 +1,34 @@
 {
-  "name": "Users",
+  "name": "user",
   "plural": "users",
   "base": "User",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
-    "validateUpsert": true
+    "validateUpsert": true,
+    "mysql": { "schema": "worklocker", "table": "User" }
   },
+  "hidden":["username","realm"],
+  
   "properties": {
+    "id": {
+      "type": "String",
+      "id": true,
+      "required": true,
+      "defaultFn": "uuid"
+    },
+    "role": {
+      "type": "String",
+      "permissions":[{ 
+        "type":"EDIT",
+        "permission":"DENY",
+        "principalId": "$everyone"
+        },{ 
+        "type":"EDIT",
+        "permission":"ALLOW",
+        "principalId": "admin"
+        }
+      ]
+    },
     "email": {
       "type": "string",
       "required": true

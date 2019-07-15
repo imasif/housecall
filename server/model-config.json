@@ -29,11 +29,23 @@
     "dataSource": "transient",
     "public": false
   },
-  "Users": {
+  "user": {
+    "dataSource": "mysqlID",
+    "public": true
+  },
+  "Grouping": {
+    "dataSource": "mysqlID",
+    "public": true
+  },
+  "Estimate": {
     "dataSource": "mysqlID",
     "public": true
   },
   "Job": {
+    "dataSource": "mysqlID",
+    "public": true
+  },
+  "Invoice": {
     "dataSource": "mysqlID",
     "public": true
   },
@@ -51,10 +63,14 @@
     "relations": {
       "user": {
         "type": "belongsTo",
-        "model": "Users",
+        "model": "user",
         "foreignKey": "userId"
       }
     }
+  },
+  "Schedule": {
+    "dataSource": "mysqlID",
+    "public": true
   },
   "ACL": {
     "dataSource": "mysqlID",
@@ -67,9 +83,5 @@
   "Role": {
     "dataSource": "mysqlID",
     "public": false
-  },
-  "Schedule": {
-    "dataSource": "mysqlID",
-    "public": true
   }
 }
