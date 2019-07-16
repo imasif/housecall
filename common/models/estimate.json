@@ -1,6 +1,6 @@
 {
-  "name": "Job",
-  "plural": "jobs",
+  "name": "Estimate",
+  "plural": "estimates",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -36,25 +36,10 @@
       "type": "string",
       "required": true
     },
-    "start": {
-      "type": "date",
-      "required": false,
-      "defaultFn": null
-    },
-    "finish": {
-      "type": "date",
-      "required": false,
-      "defaultFn": null
-    },
-    "onmyway": {
-      "type": "date",
-      "required": false,
-      "defaultFn": null
-    },
-    "completed": {
+    "denied": {
       "type": "boolean",
       "required": false,
-      "default": false
+      "default": true
     }
   },
   "validations": [],
